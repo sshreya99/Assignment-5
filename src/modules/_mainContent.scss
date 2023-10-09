@@ -1,0 +1,69 @@
+/* CONTENT */
+section {
+    @include break($scrSm) {
+        width:95%;
+    }
+}
+article img {
+    @include break($scrSm) {
+        display:none;
+    }
+}
+#headline {
+    @include bigBlockStyling(100%, 130px, $orange, center) {
+        margin: 0 auto;
+    }
+    h1 {
+        @include hStyle($white, 100, 2.5em) {
+            padding-top: 50px;
+        }
+        @include break($scrMd) {
+            font-size:2em;
+            padding-top:50px;
+        }
+        @include break($scrSm) {
+            font-size:1.5em;
+            padding-top:30px;
+        }
+    }
+}
+#content {
+    width:940px;
+    margin:20px auto;
+    @include break($scrLg) {
+        width:inherit;
+    }
+    h3 {
+        @include hStyle($gray, 400, 2em);
+        @include break($scrSm) {
+            font-size:1.6em;
+        }
+    }
+    #products {
+        @include col-float(2, 2%, left);
+        img {
+            float:left;
+            margin-right:20px;
+        }
+        article {
+            margin-bottom:40px;
+        }
+        h4 {
+            line-height:1em;
+        }
+    }
+    #testimonials {
+        @include col-float(2, 2%, right);
+    }
+    #products, #testimonials {
+        @include break($scrLg) {
+            width:46%;
+            margin:0 2%;
+        }
+        @include break($scrMd) {
+            width:96%;
+            margin:0 2%;
+            float:none;
+        }
+    }
+}

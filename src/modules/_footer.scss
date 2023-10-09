@@ -1,0 +1,52 @@
+/* FOOTER */
+.greybar {
+    @include bigBlockStyling(100%, 90px, $coolwhite) {
+        clear:both;
+        padding-top:30px;
+    }
+    @include break($scrSm) {
+        display: none;
+    }
+}
+footer {
+    @include bigBlockStyling(100%, 120px, $darkgray, center) {
+        color:$white;
+        padding-top:50px;
+    }
+    @include break($scrSm) {
+        text-align:center;
+    }
+    p, img {
+        @include break($scrSm) {
+        float:none;
+        margin:0;
+        }
+    }
+}
+.social-media {
+    margin:0 auto;
+    width:165px;
+    div {
+        float:left;
+        margin-right:5px;
+    }
+    
+    a {
+        display:block;
+        width:36px;
+        height:36px;
+        text-indent:-9999px;
+    }
+    div.one {
+        background:url($img-socialbar) 0 0;
+    }
+    div.two {
+        background:url($img-socialbar) -38px 0;
+    }
+    div.three {
+        background:url($img-socialbar) -76px 0;
+    }
+    div.four {
+        background:url($img-socialbar) -114px 0;
+    }
+}

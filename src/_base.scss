@@ -1,0 +1,21 @@
+/* BASIC STYLES */
+body {
+    font-family: $font-base;
+    font-size:1em;
+    line-height:2em;
+    background:url($img-bg) $white repeat-x;
+    margin:0;}
+main {
+    width: calc(100% - (100% - 940px));
+    margin:0 auto;
+    padding:0 10px;
+    @include break($scrLg) {
+        width: 768px;
+    }
+    @include break($scrMd) {
+        width:460px;
+    }
+    @include break($scrSm) {
+        width:300px;
+    }
+}

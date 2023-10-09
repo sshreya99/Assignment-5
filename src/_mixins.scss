@@ -1,0 +1,26 @@
+@mixin break($scrWidth) {
+    @media (max-width: $scrWidth) {
+         @content;
+}
+}
+
+@mixin hStyle($color: inherit, $fweight: normal, $fsize: inherit, $lheight: normal) {
+color: $color;
+font-weight: $fweight;
+font-size: $fsize;
+line-height: $lheight;
+@content;
+}
+
+@mixin col-float($colqty, $margin, $float) {
+width: ((100% - ($margin * ($colqty + 1))) / $colqty);
+float: $float;
+}
+
+@mixin bigBlockStyling($width: auto, $height: auto, $bgstyle: inherit, $align: left) {
+width: $width;
+height: $height;
+background: $bgstyle;
+text-align: $align;
+@content;
+}

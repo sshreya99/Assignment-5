@@ -1,0 +1,60 @@
+
+/* NAVIGATION */
+figure {
+    @include bigBlockStyling(400px, 190px, #{url($img-logo) no-repeat 0 50px}, left) {
+    float:left;
+    display:block;
+    margin:0; }
+    @include break($scrLg) {
+        width:inherit;
+        height:140px;
+        float:none;
+        background-position:center;
+    }
+    @include break($scrSm) {
+        background-size:contain;
+        height:100px;
+    }
+}
+nav {
+    @include bigBlockStyling(540px, 190px, $align: right) {
+        float:left;
+    }
+    @include break($scrLg) {
+        width:inherit;
+        height:50px;
+        float:none;
+        text-align:center;
+    }
+    @include break($scrSm) {
+        margin-bottom:40px !important;
+    }
+    ul {
+        list-style-type:none;
+        margin-top:95px;
+        @include break($scrLg) {
+            margin-top:0;
+        }
+        li {
+            display:inline;
+            font-size:0.8em;
+            margin-right:10px;
+            @include break($scrLg) {
+                font-size:1em;
+                margin:0 10px;
+            }
+            @include break($scrMd) {
+                font-size:0.8em;
+                margin:0 5px;
+            }
+            a {
+                color:$orangered;
+                text-decoration:none;
+                letter-spacing:-0.01em;
+                &:hover {
+                color:$white;
+                }
+            }
+        }
+    }
+}

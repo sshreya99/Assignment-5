@@ -1,0 +1,58 @@
+/* HEADER */
+header {
+    @include bigBlockStyling($width: inherit, $align: center) {
+    clear:both;
+    padding-top:40px;
+    }
+    img {
+        max-width:100%;
+        height:auto;
+        @include break($scrMd) {
+            margin-bottom:100px;
+        }
+        @include break($scrSm) {
+            margin-bottom:80px;
+        }
+    }
+    h1 {
+        @include hStyle($orangered, $fweight: 100, $fsize: 4em, $lheight: 0);
+        @include break($scrLg) {
+            font-size:3em;
+        }
+        @include break($scrMd) {
+            font-size:2em;
+        }
+        &:first-child {
+            @include break($scrSm) {
+                font-size:1.4em;
+                margin-bottom:20px;
+            }
+        }
+    }
+    h2 {
+        @include hStyle($white, 900, 2.5em, 0) {
+            margin-bottom:70px;
+        }
+        @include break($scrLg) {
+            font-size:1.5em;
+        }
+        @include break($scrMd) {
+            font-size:1em;
+        }
+        @include break($scrSm) {
+            font-size:1.4em;
+        }
+    }
+    h3 {
+        @include hStyle($gray, 400, 2em, 0) {
+            margin-bottom: 50px;
+        }
+        @include break($scrMd) {
+            font-size:1.5em;
+        }
+        @include break($scrSm) {
+            color:$white;
+            font-size:1em;
+        }
+    }
+}
